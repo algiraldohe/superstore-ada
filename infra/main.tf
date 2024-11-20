@@ -1,0 +1,3 @@
+module "snowflake" {
+  source = "./snowflake"
+}
