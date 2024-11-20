@@ -1,3 +1,8 @@
 provider "snowflake" {
   role = "SYSADMIN"
 }
+
+provider "airbyte" {
+  // if running locally (Airbyte OSS), include the server url to the airbyte-api-server
+  server_url = "http://localhost:8006/v1"
+}

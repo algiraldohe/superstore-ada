@@ -6,5 +6,9 @@ terraform {
       source  = "snowflake-labs/snowflake"
       version = "0.97.0"
     }
+    airbyte = {
+      source  = "airbytehq/airbyte"
+      version = "0.6.5"
+    }
   }
 }
