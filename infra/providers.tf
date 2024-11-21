@@ -1,5 +1,5 @@
 provider "snowflake" {
-  role = "SYSADMIN"
+  role = "ACCOUNTADMIN"
 }
 
 provider "aws" {

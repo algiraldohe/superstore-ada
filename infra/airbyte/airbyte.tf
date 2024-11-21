@@ -24,3 +24,37 @@ resource "airbyte_source_s3" "superstore-ada-datasets" {
     workspace_id = var.airbyte_workspace_id
     
 }
+
+
+// Destinations
+
+// AWS Secrets implementation for Terraform
+// Private Key
+data "aws_secretsmanager_secret" "snowflake_tf_snow_private_key" {
+  name = "snowflake_tf_snow_private_key"
+}
+
+data "aws_secretsmanager_secret_version" "snowflake_tf_snow_private_key" {
+  secret_id = data.aws_secretsmanager_secret.snowflake_tf_snow_private_key.id
+}
+
+
+resource "airbyte_destination_snowflake" "superstore-ada-datasets" {
+    configuration = {
+      credentials = {
+        key_pair_authentication = {
+          private_key = jsondecode(data.aws_secretsmanager_secret_version.snowflake_tf_snow_private_key.secret_string)["SNOWFLAKE_PRIVATE_KEY"]
+        }
+      }
+      database = var.snowflake_database_name
+      host = var.snowflake_host
+      role = var.snowflake_role 
+      schema = var.snowflake_schema_name
+      username = var.snowflake_user
+      warehouse = var.snowflake_warehouse_name
+    }
+
+    name = "Snowflake Superstore"
+    workspace_id = var.airbyte_workspace_id
+
+}

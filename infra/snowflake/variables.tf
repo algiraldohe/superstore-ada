@@ -7,3 +7,9 @@ variable "database_name" {
   type        = string
   description = ""
 }
+
+variable "schema_name" {
+    type = string
+    description = ""
+  
+}

@@ -7,5 +7,6 @@ locals {
   airbyte_service_role_arn = "arn:aws:iam::992382719587:role/airbyte-service-access-s3"
   airbyte_workspace_id     = "993c8966-4593-4478-9f4b-07424e8e407d"
   aws_profile              = "daverse-${terraform.workspace}"
-  airbyte_auth_api_key     = ""
+  snowflake_role = upper("accountadmin")
+
 }

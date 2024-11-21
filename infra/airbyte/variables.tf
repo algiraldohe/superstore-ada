@@ -22,3 +22,33 @@ variable "aws_profile" {
     type = string
     description = ""
 }
+
+variable "snowflake_database_name" {
+    type = string
+    description = ""
+}
+
+variable "snowflake_warehouse_name" {
+    type = string
+    description = ""
+}
+
+variable "snowflake_schema_name" {
+    type = string
+    description = ""
+}
+
+variable "snowflake_host" {
+    type = string
+    description = ""
+}
+
+variable "snowflake_user" {
+    type = string
+    description = ""
+}
+
+variable "snowflake_role" {
+    type = string
+    description = ""
+}
