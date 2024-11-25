@@ -1,0 +1,8 @@
+version: 2
+
+sources:
+  - name: TF_DAVERSE_{{ var('environment') | upper}}
+    schema: TF_BRONZE_{{ var('environment') | upper}}
+    tables:
+      - name: bronze_overall_superstore
+        identifier: TF_OVERALL_SUPERSTORE

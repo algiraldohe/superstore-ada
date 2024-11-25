@@ -15,3 +15,5 @@ Destination = "SNOWFLAKE" not possible to set authentication for user through [K
 [Airbyte Terraform Provider](https://reference.airbyte.com/reference/using-the-terraform-provider#3-create-a-source)
 
 [AWS Secrets for Terraform Credential Management](https://spacelift.io/blog/terraform-secrets)
+
+[Airbyte API Authentication](https://prb68668.us-east-1.snowflakecomputing.com)
