@@ -58,7 +58,7 @@ variable "project_name" {
   description = ""
 }
 
-variable "prefix" {
+variable "airbyte_prefix" {
   type        = string
   description = ""
 }

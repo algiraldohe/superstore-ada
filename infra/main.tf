@@ -3,7 +3,7 @@ module "snowflake" {
   source         = "./snowflake"
   database_name  = local.database_name
   warehouse_name = local.warehouse_name
-  schema_name    = var.snowflake_schema_name
+  schema_name    = local.schema_name
 }
 
 module "airbyte" {
@@ -12,7 +12,7 @@ module "airbyte" {
   project_name = local.project_name
   bucket_name  = local.bucket_name
   region_name  = local.region_name
-  prefix       = local.prefix
+  airbyte_prefix = local.airbyte_prefix
 
   // Source Required
   airbyte_service_role_arn = local.airbyte_service_role_arn
@@ -25,5 +25,5 @@ module "airbyte" {
   snowflake_host           = var.airbyte_snowflake_host
   snowflake_user           = var.airbyte_snowflake_user
   snowflake_role           = local.snowflake_role
-  snowflake_schema_name    = var.snowflake_schema_name
+  snowflake_schema_name    = local.schema_name
 }

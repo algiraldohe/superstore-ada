@@ -54,7 +54,7 @@ resource "airbyte_source_s3" "superstore_ada_datasets" {
         }
       }
       globs = ["datasets/*.csv"]
-      name  = "overall-superstore"
+      name  = "overall_superstore"
     }]
   }
 
@@ -92,5 +92,5 @@ resource "airbyte_connection" "s3_to_snowflake_superstore_ada_datasets" {
   destination_id = airbyte_destination_snowflake.superstore_ada_datasets.destination_id
   source_id      = airbyte_source_s3.superstore_ada_datasets.source_id
   name           = "s3-to-snowflake-${var.project_name}"
-  prefix         = var.prefix
+  prefix         = var.airbyte_prefix
 }
