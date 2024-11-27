@@ -17,3 +17,5 @@ Destination = "SNOWFLAKE" not possible to set authentication for user through [K
 [AWS Secrets for Terraform Credential Management](https://spacelift.io/blog/terraform-secrets)
 
 [Airbyte API Authentication](https://prb68668.us-east-1.snowflakecomputing.com)
+
+[Airflow Setup with Astronomer](https://www.astronomer.io/docs/astro/cli/run-airflow-locally)
