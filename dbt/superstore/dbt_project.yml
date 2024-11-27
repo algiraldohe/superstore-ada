@@ -32,8 +32,10 @@ clean-targets:         # directories to be removed by `dbt clean`
 models:
   superstore:
     # Config indicated by + and applies to all files under models/example/
-    src:
+
+    dim:
       +materialized: view
+      +schema: tf_silver
   
 vars:
   environment: default
