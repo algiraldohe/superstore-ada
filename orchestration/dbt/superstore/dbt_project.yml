@@ -38,5 +38,5 @@ models:
       +schema: tf_silver
   
 vars:
-  environment: default
+  environment: dev
   silver_schema: tf_silver

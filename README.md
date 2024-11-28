@@ -19,3 +19,8 @@ Destination = "SNOWFLAKE" not possible to set authentication for user through [K
 [Airbyte API Authentication](https://prb68668.us-east-1.snowflakecomputing.com)
 
 [Airflow Setup with Astronomer](https://www.astronomer.io/docs/astro/cli/run-airflow-locally)
+
+[Orchestrate dbt Core jobs with Airflow and Cosmos](https://www.astronomer.io/docs/learn/airflow-dbt/)
+
+[DBT Core + Airflow](https://astronomer.github.io/astronomer-cosmos/)
+
