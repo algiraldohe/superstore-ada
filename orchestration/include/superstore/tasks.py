@@ -20,3 +20,15 @@ def _get_sync_status(url, bearer, job_id):
         "Authorization": bearer
     }
     return requests.get(url=url, headers=headers)
+
+def _get_airbyte_access_token(url, client_id, client_secret):
+    url = f"{url}/v1/applications/token"
+    headers = {
+        "accept": "application/json",
+        "content-type": "application/json"
+    }
+    payload = {
+        "client_id": client_id,
+        "client_secret": client_secret
+    }
+    return requests.post(url, json=payload, headers=headers)
