@@ -36,6 +36,10 @@ models:
     dim:
       +materialized: view
       +schema: tf_silver
+
+    mart:
+      +materialized: table
+      +schema: tf_gold
   
 vars:
   environment: dev

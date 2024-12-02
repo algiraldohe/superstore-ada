@@ -24,3 +24,7 @@ Destination = "SNOWFLAKE" not possible to set authentication for user through [K
 
 [DBT Core + Airflow](https://astronomer.github.io/astronomer-cosmos/)
 
+[Cross DAG Dependencies](https://www.astronomer.io/docs/learn/cross-dag-dependencies/#implement-cross-dag-dependencies)
+
+[Event Driven DAG Schedule](https://www.astronomer.io/docs/learn/airflow-datasets/#conditional-dataset-scheduling)
+
