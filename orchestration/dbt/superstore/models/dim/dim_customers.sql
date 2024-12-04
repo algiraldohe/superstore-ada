@@ -3,15 +3,10 @@ with bronze_customers_superstore as (
 )
 
 select 
-    _airbyte_raw_id
-    , {{ '"' + 'customer id' | upper + '"' }} as customer_id
+    {{ '"' + 'customer id' | upper + '"' }} as customer_id
     , {{ '"' + 'customer name' | upper + '"' }} as customer_name
     , segment
-    , country
-    , region
-    , state 
-    , city
-    , {{ '"' + 'postal code' | upper + '"' }} as postal_code
+    , max({{ '"' + 'order date' | upper + '"' }}) as last_transaction_date
 
 from bronze_customers_superstore
 group by all
