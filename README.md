@@ -1,5 +1,5 @@
 # Superstore ADA (Airflow DBT Airbyte)
-
+![ADA Architecture](resources/ada_architecture_diagram.png)
 
 ## Tech Debt
 
