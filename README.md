@@ -20,6 +20,18 @@ Our mission? To leverage cutting-edge technologies  to transform raw data into a
 
 ## Getting Started
 
+### Requirements
+Python 3.12.3 
+Docker and Docker Compose
+Airbyte OSS version or Cloud *There's a configuration to perform the sync in either, but cloud version requires a [15 day Airbyte trial account](https://cloud.airbyte.com/signup)*
+Terraform v1.9.2 on darwin_arm64
+Snowflake [30 days trial account](https://signup.snowflake.com)
+Astro CLI [Astro CLI setup instructions](https://docs.astronomer.io/astro/cli/install-cli)
+
+> [!NOTE] 
+> Bear in mind that each project setup (Terraform, DBT, Airflow) requires their specifics modules and versions. Check lock files within the projects.
+
+
 ### Environment Setup
 Create the folder ***infra*** for the infrastructure provisioning. Contains Terraform codebase to provision resources both in Snowflake and Airbyte.
 
@@ -36,7 +48,7 @@ The dbt project folder is created with the following command:
 dbt init superstore
 ```
 
-> [!info] 
+> [!NOTE] 
 > Make sure you `cd` to the specific folder where you want the projects for airflow and dbt setup
 
 
