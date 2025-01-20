@@ -1,14 +1,44 @@
 # Superstore ADA (Airflow DBT Airbyte)
 ![ADA Architecture](resources/ada_architecture_diagram_v2.png)
 
+*Data Ingestion:* Airbyte for automated extraction from diverse sources
+*Data Storage:* Snowflake for scalable cloud warehousing
+*Transformations* dbt SQL-based ELT transformations with CI/CD integration
+*Orchestration* Airflow for dependecy management, for pipeline automation and scheduling.
+*BI Analytics* Preset for interactive reporting and insights
+*Ops Management:* Astronomer for Airflow setup, Terraform for infrastructure provisioning and CI/CD automation, AWS for state storage and credentials management
+
 ## Table of Contents
 1. [Introduction](#introduction)
-2. [Installation](#introduction)
+2. [Installation](#getting-started)
 6. [Resources](#resources)
 
 ## Introduction
+In today’s fast-paced digital economy, e-commerce businesses generate vast amounts of data—but without the right strategy and infrastructure, that data remains an untapped asset. This repository documents the implementation of an end-to-end data platform for an e-commerce business, leveraging cutting-edge technologies from the Modern Data Stack (MDS).
 
-## Installation
+Our mission? To leverage cutting-edge technologies  to transform raw data into actionable insights, optimising operations and unlocking new growth opportunities through the development of  a scalable, efficient, and automated data ecosystem that streamlines data ingestion, transformation, orchestration, and serving, enabling advanced analytics and decision-making.
+
+## Getting Started
+
+### Environment Setup
+Create the folder ***infra*** for the infrastructure provisioning. Contains Terraform codebase to provision resources both in Snowflake and Airbyte.
+
+Create the folder ***orchestration*** for airflow and dbt setup. The following structure is created once we start the project using the following command from the astro CLI:
+
+![Folder Structure](resources/folder_structure.png)
+
+```bash
+astro dev init
+``` 
+
+The dbt project folder is created with the following command:
+```bash
+dbt init superstore
+```
+
+> [!info] 
+> Make sure you `cd` to the specific folder where you want the projects for airflow and dbt setup
+
 
 ## Tech Debt
 
